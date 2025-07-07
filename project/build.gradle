@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://artifacts.appodeal.com/android" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.0'
+        // No need for Appodeal plugin unless you use specific modules
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://artifacts.appodeal.com/android" }
+    }
+}
