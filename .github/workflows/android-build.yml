@@ -7,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -23,11 +24,10 @@ jobs:
 
       - name: Build APK
         run: |
-          cd connectgold_app
           buildozer android debug
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # <-- FIXED!
         with:
           name: connectgold-apk
-          path: connectgold_app/bin/*.apk
+          path: bin/*.apk
