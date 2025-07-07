@@ -19,8 +19,20 @@ jobs:
 
       - name: Install system dependencies
         run: |
-          sudo apt update
-          sudo apt install -y zip unzip openjdk-17-jdk python3-pip python3-setuptools python3-wheel git libffi-dev libssl-dev libncurses5
+          sudo apt-get update || true
+          sudo apt-get install -y \
+            openjdk-17-jdk \
+            zip unzip \
+            python3-pip \
+            python3-setuptools \
+            python3-wheel \
+            git \
+            libffi-dev \
+            libssl-dev \
+            libncurses5 \
+            libbz2-dev \
+            libreadline-dev \
+            libsqlite3-dev
 
       - name: Install Cython & Buildozer
         run: |
