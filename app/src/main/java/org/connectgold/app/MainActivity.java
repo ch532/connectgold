@@ -64,6 +64,110 @@ public class MainActivity extends AppCompatActivity {
         Appodeal.show(this, Appodeal.BANNER_BOTTOM);
     }
 }
+// Interstitial Ad Callbacks
+Appodeal.setInterstitialCallbacks(new InterstitialCallbacks() {
+    @Override
+    public void onInterstitialClicked() {
+        Log.d("Appodeal", "Interstitial Ad Clicked");
+    }
+
+    @Override
+    public void onInterstitialShown() {
+        Log.d("Appodeal", "Interstitial Ad Shown");
+    }
+
+    @Override
+    public void onInterstitialLoaded(boolean isPrecache) {
+        Log.d("Appodeal", "Interstitial Loaded");
+    }
+
+    @Override
+    public void onInterstitialFailedToLoad() {
+        Log.d("Appodeal", "Interstitial Failed to Load");
+    }
+
+    @Override
+    public void onInterstitialClosed() {
+        Log.d("Appodeal", "Interstitial Closed");
+    }
+
+    @Override
+    public void onInterstitialExpired() {
+        Log.d("Appodeal", "Interstitial Expired");
+    }
+
+    @Override
+    public void onInterstitialShowFailed() {
+        Log.d("Appodeal", "Interstitial Show Failed");
+    }
+});
+
+// Rewarded Video Callbacks
+Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {
+    @Override
+    public void onRewardedVideoClicked() {
+        Log.d("Appodeal", "Rewarded Ad Clicked");
+    }
+
+    @Override
+    public void onRewardedVideoShown() {
+        Log.d("Appodeal", "Rewarded Ad Shown");
+    }
+
+    @Override
+    public void onRewardedVideoClosed(boolean finished) {
+        Log.d("Appodeal", "Rewarded Ad Closed");
+    }
+
+    @Override
+    public void onRewardedVideoCompleted() {
+        Log.d("Appodeal", "User Earned Reward");
+    }
+
+    @Override
+    public void onRewardedVideoFailedToLoad() {
+        Log.d("Appodeal", "Rewarded Ad Failed to Load");
+    }
+
+    @Override
+    public void onRewardedVideoExpired() {
+        Log.d("Appodeal", "Rewarded Ad Expired");
+    }
+
+    @Override
+    public void onRewardedVideoLoaded(boolean isPrecache) {
+        Log.d("Appodeal", "Rewarded Ad Loaded");
+    }
+});
+
+// Banner Ad Clicks
+Appodeal.setBannerCallbacks(new BannerCallbacks() {
+    @Override
+    public void onBannerClicked() {
+        Log.d("Appodeal", "Banner Ad Clicked");
+    }
+
+    @Override
+    public void onBannerShown() {
+        Log.d("Appodeal", "Banner Ad Shown");
+    }
+
+    @Override
+    public void onBannerFailedToLoad() {
+        Log.d("Appodeal", "Banner Ad Failed to Load");
+    }
+
+    @Override
+    public void onBannerLoaded(int height, boolean isPrecache) {
+        Log.d("Appodeal", "Banner Ad Loaded");
+    }
+
+    @Override
+    public void onBannerExpired() {
+        Log.d("Appodeal", "Banner Ad Expired");
+    }
+});
+
 
 private void populateNativeAdView(NativeAd nativeAd, NativeAdView adView) {
     TextView headline = adView.findViewById(R.id.headline);
