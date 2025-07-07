@@ -4,12 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- WebView -->
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/adView" />
 
+    <!-- Native Ad Placeholder -->
+    <com.google.android.gms.ads.nativead.NativeAdView
+        android:id="@+id/nativeAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:visibility="gone">
+        <!-- We'll fill this in code -->
+    </com.google.android.gms.ads.nativead.NativeAdView>
+
+    <!-- AdMob Banner -->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"
