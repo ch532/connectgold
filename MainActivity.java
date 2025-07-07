@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         
         // Load website
         webView = findViewById(R.id.webview);
-        webView.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new MyWebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("https://connectgold.sbs");
 
