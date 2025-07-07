@@ -5,7 +5,10 @@ package.domain = org.connectgold.app
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
-requirements = python3,kivy,kivmob,android,jnius
+
+# ✅ Updated with cython
+requirements = python3,kivy,kivmob,android,jnius,cython
+
 orientation = portrait
 fullscreen = 1
 
