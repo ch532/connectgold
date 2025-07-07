@@ -64,3 +64,19 @@ public class MainActivity extends AppCompatActivity {
         Appodeal.show(this, Appodeal.BANNER_BOTTOM);
     }
 }
+
+private void populateNativeAdView(NativeAd nativeAd, NativeAdView adView) {
+    TextView headline = adView.findViewById(R.id.headline);
+    TextView body = adView.findViewById(R.id.body);
+    Button callToAction = adView.findViewById(R.id.call_to_action);
+
+    headline.setText(nativeAd.getHeadline());
+    body.setText(nativeAd.getBody());
+    callToAction.setText(nativeAd.getCallToAction());
+
+    adView.setHeadlineView(headline);
+    adView.setBodyView(body);
+    adView.setCallToActionView(callToAction);
+
+    adView.setNativeAd(nativeAd);
+}
