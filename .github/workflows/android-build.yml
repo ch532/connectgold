@@ -9,17 +9,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11  # ✅ FIXED VERSION
+          python-version: 3.11
 
-      - name: Install dependencies
+      - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install -y zip unzip openjdk-17-jdk python3-pip python3-setuptools python3-wheel git
+          sudo apt install -y zip unzip openjdk-17-jdk python3-pip python3-setuptools python3-wheel git libffi-dev libssl-dev
+
+      - name: Install Python packages (including Cython first)
+        run: |
+          pip install cython
           pip install buildozer
 
       - name: Build APK
