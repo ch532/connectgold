@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">WebView App</string>
-
+    <string name="app_name">ConnectGold</string>
+    <string name="admob_app_id">ca-app-pub-1171216593802007~4173705766</string>
+    <string name="banner_ad_unit">ca-app-pub-1171216593802007/8884489855</string>
+    <string name="interstitial_ad_unit">ca-app-pub-1171216593802007/4945244849</string>
+    <string name="rewarded_ad_unit">ca-app-pub-1171216593802007/1435861786</string>
+    <string name="native_ad_unit">ca-app-pub-1171216593802007/5226917075</string>
 </resources>
